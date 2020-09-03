@@ -46,22 +46,6 @@ public class ClienteData extends Conexao {
         return ps.executeUpdate() > 0;
     }
 
-//    public Vector pesquisar(String pesq) throws Exception{
-//        Vector dados = new Vector();
-//        String sql = "SELECT * FROM PRODUTO WHERE nomeproduto ILIKE '"+pesq+"%'";
-//        PreparedStatement ps = getConexao().prepareStatement(sql);
-//        ResultSet rs = ps.executeQuery();
-//        while (rs.next()) {
-//            Vector linha = new Vector();
-//            linha.add(rs.getInt("id"));
-//            linha.add(rs.getString("nome"));
-//            linha.add(rs.getString("sobrenome"));
-//            linha.add(rs.getString("email"));
-//            linha.add(rs.getString("telefone"));
-//            linha.add(rs.getString("cpf"));
-//            dados.add(linha);
-//        }
-//        return dados;
     public ArrayList<Cliente> pesquisar(String pesq) throws Exception {
         String sql = "SELECT * FROM CLIENTE WHERE NOME ILIKE '" + pesq + "%'";
         PreparedStatement ps = getConexao().prepareStatement(sql);
