@@ -1,0 +1,17 @@
+/**
+ * Author:  Mariugo
+ * Created: 02/09/2020
+ */
+
+CREATE DATABASE SWINGDB;
+
+CREATE TABLE CLIENTE (
+	id SERIAL,
+	nome VARCHAR(25) NOT NULL,
+	sobrenome VARCHAR (50) NOT NULL,
+	email VARCHAR (50) NOT NULL,
+	telefone VARCHAR (15) NOT NULL,
+	cpf VARCHAR (20) NOT NULL,
+	CONSTRAINT PK_CLIENTE PRIMARY KEY (id)
+);
+
